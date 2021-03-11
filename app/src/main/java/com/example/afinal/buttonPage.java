@@ -20,15 +20,13 @@ public class buttonPage extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_button_page);
 
         button1 = (Button)findViewById(R.id.button1);
-        button1.setOnClickListener(this);
-
         button2 = (Button)findViewById(R.id.button2);
-        button2.setOnClickListener(this);
-
         button3 = (Button)findViewById(R.id.button3);
-        button3.setOnClickListener(this);
-
         button4 = (Button)findViewById(R.id.button4);
+
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
         button4.setOnClickListener(this);
     }
 
@@ -38,9 +36,8 @@ public class buttonPage extends AppCompatActivity implements View.OnClickListene
         switch(v.getId()){
             case R.id.button1:
                 Toast.makeText(this,"Button 1 clicked",Toast.LENGTH_LONG);
-                Intent intent1 = new Intent(this, button1.class);
+                Intent intent1 = new Intent(this, com.example.afinal.button1.class);
                 startActivity(intent1);
-                break;
 
             case R.id.button2:
                 Toast.makeText(this,"Button 2 clicked",Toast.LENGTH_SHORT);
