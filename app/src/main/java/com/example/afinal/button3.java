@@ -12,7 +12,7 @@ public class button3 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_button1);
+        setContentView(R.layout.activity_button3);
 
         back = (Button)findViewById(R.id.back);
 
