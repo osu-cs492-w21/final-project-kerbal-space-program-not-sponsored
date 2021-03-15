@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Final</string>
+
+    <string name="back_button_txt">Back</string>
+
+    <string name="asteroid_date_label">Closest To Earth:</string>
+    <string name="asteroid_diameter_label">Estimated Diameter: </string>
+    <string name="asteroid_distance_label">Miss Distance: </string>
+    <string name="asteroid_velocity_label">Relative Distance:</string>
+    <string name="asteroid_hazard_label">Collision Hazard:</string>
+
+    <string name="asteroid_diameter_str">%1$d - %2$d meters</string>
+    <string name="asteroid_distance_str">%1$d kilometers</string>
+    <string name="asteroid_velocity_str">%1$d kilometers/hour</string>
 </resources>
