@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+//Find asteroids near you
 public class button4 extends AppCompatActivity implements View.OnClickListener {
+    public static String TAG = button4.class.getSimpleName();
+
     Button back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +21,12 @@ public class button4 extends AppCompatActivity implements View.OnClickListener {
         back = (Button)findViewById(R.id.back);
 
         back.setOnClickListener(this);
+
+        //loading icon
+        //error message
+
+
+
 
     }
 

@@ -13,11 +13,20 @@
     <string name="MARSphoto_id" translatable="false">Photo Id: \u0020</string>
     <string name="MARScamera" translatable="false">Camera: \u0020</string>
 
-
-=======
->>>>>>> parent of 778110b (umm made changes to string)
     <string name="latitude_label"> Latitude:</string>
     <string name="longitude_label">Longitude</string>
     <string name="date_label">Select Date:</string>
     <string name="title_activity_mars_date">MARSDate</string>
+
+    <string name="back_button_txt">Back</string>
+
+    <string name="asteroid_date_label">Closest To Earth:</string>
+    <string name="asteroid_diameter_label">Estimated Diameter: </string>
+    <string name="asteroid_distance_label">Miss Distance: </string>
+    <string name="asteroid_velocity_label">Relative Distance:</string>
+    <string name="asteroid_hazard_label">Collision Hazard:</string>
+
+    <string name="asteroid_diameter_str">%1$d - %2$d meters</string>
+    <string name="asteroid_distance_str">%1$d kilometers</string>
+    <string name="asteroid_velocity_str">%1$d kilometers/hour</string>
 </resources>
