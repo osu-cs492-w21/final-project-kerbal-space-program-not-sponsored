@@ -45,7 +45,7 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
 
         //sol entered
         daySolET = findViewById(R.id.solDay);
- 
+
         //search button collects sol info and seaches for picture on the sol day
         searchB = findViewById(R.id.solSearch);
         searchB.setOnClickListener(this);
