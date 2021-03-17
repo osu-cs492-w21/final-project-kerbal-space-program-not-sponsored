@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.afinal.Data.AsteroidData;
+import com.example.afinal.data.AsteroidData;
 
 import java.util.ArrayList;
 
