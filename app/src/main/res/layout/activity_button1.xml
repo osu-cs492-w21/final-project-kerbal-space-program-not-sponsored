@@ -24,11 +24,20 @@
         android:id="@+id/picture_of_the_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp" />
-    <!--    <VideoView-->
-    <!--        android:id="@+id/video"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content" />-->
+        android:layout_marginTop="70dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+    <TextView
+        android:id="@+id/video_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="449dp"
+        android:text="This is a video! click on the image to play"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/picture_title"
