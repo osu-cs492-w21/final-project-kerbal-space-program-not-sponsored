@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.mcxiaoke.volley:library:1.0.0'
 
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'

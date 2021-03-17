@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MARS.MARSDaily"
+    tools:context=".MARS"
     android:background="@drawable/button3dailybg">
 
     <Button
-        android:id="@+id/backdaily3"
+        android:id="@+id/backMARS"
         android:layout_width="71dp"
         android:layout_height="35dp"
         android:layout_marginStart="4dp"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.266"/>
 
     <Button
-        android:id="@+id/homedaily3"
+        android:id="@+id/homeMARS"
         android:layout_width="72dp"
         android:layout_height="35dp"
         android:layout_marginStart="80dp"

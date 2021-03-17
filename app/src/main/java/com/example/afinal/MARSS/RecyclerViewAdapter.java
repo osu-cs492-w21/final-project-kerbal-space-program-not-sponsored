@@ -1,4 +1,4 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,7 +16,7 @@ import com.example.afinal.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<com.example.afinal.MARS.RecyclerViewAdapter.ViewHolder>{
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private Context contextC;
     private List<RoverPhotos> roverPhoto = new ArrayList<>();
     public RecyclerViewAdapter(Context context){

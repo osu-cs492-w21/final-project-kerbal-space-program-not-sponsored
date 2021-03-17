@@ -1,4 +1,4 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
 //Store Rover Info
 public class RoverInfo {
@@ -6,45 +6,45 @@ public class RoverInfo {
     private String name;
     private String landing_date;
     private String launch_date;
-    private String status;
+    private String status ;
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getLanding_date(){
+    public String getLanding_date() {
         return landing_date;
     }
 
-    public void setLanding_date(String landing_date){
+    public void setLanding_date(String landing_date) {
         this.landing_date = landing_date;
     }
 
-    public String getLaunch_date(){
+    public String getLaunch_date() {
         return launch_date;
     }
 
-    public void setLaunch_date(String launch_date){
+    public void setLaunch_date(String launch_date) {
         this.launch_date = launch_date;
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(String status){
+    public void setStatus(String status) {
         this.status = status;
     }
 }

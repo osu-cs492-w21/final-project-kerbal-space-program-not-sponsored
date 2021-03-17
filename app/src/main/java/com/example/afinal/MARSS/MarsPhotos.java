@@ -1,4 +1,4 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -10,11 +10,11 @@ public class MarsPhotos {
     @Expose
     private List<RoverPhotos> photos;
 
-    public void setPhotos(List<RoverPhotos> photos){
+    public void setPhotos(List<RoverPhotos> photos) {
         this.photos = photos;
     }
 
-    public List<RoverPhotos> getPhotos(){
+    public List<RoverPhotos> getPhotos() {
         return photos;
     }
 }

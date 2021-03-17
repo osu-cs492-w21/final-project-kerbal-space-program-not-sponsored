@@ -1,4 +1,4 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.example.afinal.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,17 +66,17 @@ public class FragmentPhotos extends Fragment implements View.OnClickListener{
 
     private void getData(){
         disposableCD.add(marsCallMNC.getAllMarsPhotosBySol(marsRover, sol, 1, appiKey).subscribeOn(Schedulers.io()).
-                        observeOn(AndroidSchedulers.mainThread()).subscribe(marsPhotos ->{
-                    loadingPM.setVisibility(GONE);
+            observeOn(AndroidSchedulers.mainThread()).subscribe(marsPhotos ->{
+                loadingPM.setVisibility(GONE);
 
-                    recyclerView.setVisibility(VISIBLE);
-                    roverFAB.setVisibility(VISIBLE);
+                recyclerView.setVisibility(VISIBLE);
+                roverFAB.setVisibility(VISIBLE);
 
-                    adapterRVA.setUpMarsList(marsPhotos.getPhotos());
-                    recyclerView.setAdapter(adapterRVA);
-                }, throwable ->{
-                    Toast.makeText(getContext(), throwable.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                })
+                adapterRVA.setUpMarsList(marsPhotos.getPhotos());
+                recyclerView.setAdapter(adapterRVA);
+            }, throwable ->{
+                Toast.makeText(getContext(), throwable.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            })
         );
     }
 

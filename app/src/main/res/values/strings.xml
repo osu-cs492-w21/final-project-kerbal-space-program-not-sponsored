@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Final</string>
-<<<<<<< HEAD
 
     <string name="MARSrover_name" translatable="false">Rover Name: \u0020</string>
     <string name="MARSstatus" translatable="false">Status: \u0020</string>

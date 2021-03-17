@@ -1,6 +1,4 @@
-package com.example.afinal.MARS;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.afinal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.afinal.R;
-import com.example.afinal.button3;
-import com.example.afinal.buttonPage;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MARSDaily extends AppCompatActivity implements View.OnClickListener {
+import com.example.afinal.MARSS.FragmentPhotos;
+
+public class MARS extends AppCompatActivity implements View.OnClickListener {
     Button backB;
     Button homeB;
     Button searchB;
@@ -24,13 +22,13 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mars_daily);
+        setContentView(R.layout.activity_mars);
         setTitle("Mars Rover Photos");
 
         //buttons to go to previous page and button page
-        backB = (Button)findViewById(R.id.backdaily3);
+        backB = findViewById(R.id.backMARS);
         backB.setOnClickListener(this);
-        homeB = (Button)findViewById(R.id.homedaily3);
+        homeB = findViewById(R.id.homeMARS);
         homeB.setOnClickListener(this);
 
         //Rover buttons Click to see pictures and rover info
@@ -45,7 +43,7 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
 
         //sol entered
         daySolET = findViewById(R.id.solDay);
- 
+
         //search button collects sol info and seaches for picture on the sol day
         searchB = findViewById(R.id.solSearch);
         searchB.setOnClickListener(this);
@@ -57,11 +55,11 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
         //rover buttons store string name as the rovers name
         //search button searches for info for the rover and its pictures
         switch(v.getId()) {
-            case R.id.backdaily3:
+            case R.id.backMARS:
                 Intent intent1 = new Intent(this, button3.class);
                 startActivity(intent1);
                 break;
-            case R.id.homedaily3:
+            case R.id.homeMARS:
                 Intent intent2 = new Intent(this, buttonPage.class);
                 startActivity(intent2);
                 break;
@@ -88,7 +86,6 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
                 //turn the text in the search bar into Sol number and use it to find pictures of the day the rover was on mars
                 int Sol = Integer.parseInt(sol);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentPhotos(Sol, marsRover)).commit();
-                break;
         }
     }
 }

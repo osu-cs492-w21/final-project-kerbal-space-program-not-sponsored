@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.afinal.buttonPage;
-import com.example.afinal.MARS.MARSDaily;
+import com.example.afinal.MARS;
 
 public class button3 extends AppCompatActivity implements View.OnClickListener {
     Button back;
@@ -26,31 +26,31 @@ public class button3 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_button3);
 
         //buttons used
-        back = (Button)findViewById(R.id.back3);
+        back = (Button)findViewById(R.id.back);
         back.setOnClickListener(this);
-        marsPhotoB = (Button)findViewById(R.id.searching3);
+        marsPhotoB = (Button)findViewById(R.id.searching);
         marsPhotoB.setOnClickListener(this);
         setTitle("Mars Rover Photos");
 
         //Instruction on how to use MARS info
         directionsTV = (TextView)findViewById(R.id.directions);
         directionsTV.setText("How to run this program:\n" +
-            "\nFirst click on a RoverInfo (Perserverance, Curiosity, Opportunity, and Spirit), they are located at the top right corner.\n" +
-            "\nSecond enter in a number for sol (duration of a solar day on Mars) in the search bar.\n" +
-            "\nThird click search button to see image taken on that day, and its information.\n" +
-            "\nFourth, click the circle 'i' button if you want to learn more information about the mars rover.\n");
+                "\nFirst click on a RoverInfo (Perserverance, Curiosity, Opportunity, and Spirit), they are located at the top right corner.\n" +
+                "\nSecond enter in a number for sol (duration of a solar day on Mars) in the search bar.\n" +
+                "\nThird click search button to see image taken on that day, and its information.\n" +
+                "\nFourth, click the circle 'i' button if you want to learn more information about the mars rover.\n");
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.back3:
+            case R.id.back:
                 Intent intent1 = new Intent(this, buttonPage.class);
                 startActivity(intent1);
                 break;
 
-            case R.id.searching3:
-                Intent intent3 = new Intent(this, MARSDaily.class);
+            case R.id.searching:
+                Intent intent3 = new Intent(this, MARS.class);
                 startActivity(intent3);
                 break;
         }

@@ -1,4 +1,4 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
 //Information on the Rover currently on Mars
 //List the rovers name, earth date the rover landed on the mars,
@@ -13,59 +13,59 @@ public class RoverPhotoManifest {
     private String max_date;
     private int total_photos;
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getLanding_date(){
+    public String getLanding_date() {
         return landing_date;
     }
 
-    public void setLanding_date(String landing_date){
+    public void setLanding_date(String landing_date) {
         this.landing_date = landing_date;
     }
 
-    public String getLaunch_date(){
+    public String getLaunch_date() {
         return launch_date;
     }
 
-    public void setLaunch_date(String launch_date){
+    public void setLaunch_date(String launch_date) {
         this.launch_date = launch_date;
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(String status){
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public int getMax_sol(){
+    public int getMax_sol() {
         return max_sol;
     }
 
-    public void setMax_sol(int max_sol){
+    public void setMax_sol(int max_sol) {
         this.max_sol = max_sol;
     }
 
-    public String getMax_date(){
+    public String getMax_date() {
         return max_date;
     }
 
-    public void setMax_date(String max_date){
+    public void setMax_date(String max_date) {
         this.max_date = max_date;
     }
 
-    public int getTotal_photos(){
+    public int getTotal_photos() {
         return total_photos;
     }
 
-    public void setTotal_photos(int total_photos){
+    public void setTotal_photos(int total_photos) {
         this.total_photos = total_photos;
     }
 }

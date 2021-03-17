@@ -1,5 +1,6 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -13,21 +14,20 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.annotation.SuppressLint;
+
 import androidx.annotation.NonNull;
 
 import com.bumptech.glide.Glide;
+import com.example.afinal.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.example.afinal.R;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-
 import retrofit2.Retrofit;
 
 import static android.view.View.VISIBLE;

@@ -1,4 +1,4 @@
-package com.example.afinal.MARS;
+package com.example.afinal.MARSS;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -14,8 +14,8 @@ public class RetrofitClient {
     public static Retrofit getInstance() {
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
         if(instance == null) {
-            instance = new Retrofit.Builder().baseUrl("https://api.nasa.gov/mars-photos/api/v1/")
-                .addConverterFactory(GsonConverterFactory.create(gson))
+            instance = new Retrofit.Builder()
+                .baseUrl("https://api.nasa.gov/mars-photos/api/v1/").addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
         }
         return instance;
