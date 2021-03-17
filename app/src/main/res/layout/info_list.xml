@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/roverInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MARS.BottomSheet">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#C17635">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF8F38"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/roverToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Rover Detail"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/black"
+                android:textStyle="italic|bold"/>
+
+            <ImageButton
+                android:id="@+id/closeIV"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="220dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginBottom="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@android:color/black"
+                app:srcCompat="@drawable/cancel"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button3roverbg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/roverImage"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/perseverance"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/roverName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARSrover_name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARSstatus"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/LaunchDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARSlaunch_date"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/landingDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARSlanding_date"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/maxSolDay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARSmax_sol"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/maxDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARSmax_earth_date"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/totalPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/MARStotal_photos"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:id="@+id/roverProgressBar"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            android:background="#00BD7747"/>
+    </LinearLayout>
+</LinearLayout>
+
