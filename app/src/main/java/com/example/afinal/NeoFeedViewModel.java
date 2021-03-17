@@ -13,7 +13,7 @@ public class NeoFeedViewModel extends ViewModel {
 
     public NeoFeedViewModel() {
         this.repository = new AsteroidRepository();
-        neoFeed = repository.getNeoFeed();
+        this.neoFeed = repository.getNeoFeed();
         //loading status
     }
 
@@ -23,7 +23,7 @@ public class NeoFeedViewModel extends ViewModel {
 
     //return loading status
 
-    public void loadForecast(String date, String apiKey) {
+    public void loadNeoFeed(String date, String apiKey) {
         this.repository.loadNeoFeed(date, date, apiKey);
     }
 }

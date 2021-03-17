@@ -9,4 +9,8 @@ public class NeoFeed {
     @SerializedName("near_earth_objects")
     private Map<String, List<AsteroidData>> nearEarthObjects;
 
+
+    public Map<String, List<AsteroidData>> getNearEarthObjects() {
+        return nearEarthObjects;
+    }
 }

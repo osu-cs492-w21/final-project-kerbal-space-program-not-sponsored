@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AsteroidRepository {
     private static final String TAG = AsteroidRepository.class.getSimpleName();
-    private static final String BASE_URL = "http://www.neowsapp.com/";
+    private static final String BASE_URL = "https://www.neowsapp.com/";
 
     private MutableLiveData<NeoFeed> neoFeed;
 //    private MutableLiveData<LoadingStatus> loadingStatus;
@@ -58,7 +58,7 @@ public class AsteroidRepository {
                 }
                 else {
                     //loading status value set error
-                    Log.d(TAG, "unsuccessful API request: " + call.request().url());
+                    Log.d(TAG, "unsuccessful API request(code!=200): " + call.request().url());
                     Log.d(TAG, "  -- response status code: " + response.code());
                     Log.d(TAG, "  -- response: " + response.toString());
                 }
@@ -67,7 +67,7 @@ public class AsteroidRepository {
             @Override
             public void onFailure(Call<NeoFeed> call, Throwable t) {
                 //loading status value set error
-                Log.d(TAG, "unsuccessful API request: " + call.request().url());
+                Log.d(TAG, "unsuccessful API request(failure): " + call.request().url());
                 t.printStackTrace();
             }
         });

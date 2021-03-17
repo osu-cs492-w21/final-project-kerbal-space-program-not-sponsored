@@ -101,9 +101,9 @@ public class AsteroidData implements Serializable {
 //           JsonArray dateStrArr = nearEarthObjectsObj.getAsJsonArray("2021-03-12");
 
            JsonObject listObj = json.getAsJsonObject();
-           JsonObject diameterObj = listObj.getAsJsonObject("esitmated_diameter");
+           JsonObject diameterObj = listObj.getAsJsonObject("estimated_diameter");
            JsonObject metersObj = diameterObj.getAsJsonObject("meters");
-           JsonArray approachArr = listObj.getAsJsonArray("close_approach_date");
+           JsonArray approachArr = listObj.getAsJsonArray("close_approach_data");
            JsonObject approachObj = approachArr.get(0).getAsJsonObject();
            JsonObject velocityObj = approachObj.getAsJsonObject("relative_velocity");
            JsonObject distanceObj = approachObj.getAsJsonObject("miss_distance");
