@@ -34,9 +34,7 @@ import java.util.List;
 import java.util.Map;
 
 //Find asteroids near you
-public class button4 extends AppCompatActivity
-        implements View.OnClickListener,
-        AsteroidAdapter.OnAsteroidItemClickListener{
+public class button4 extends AppCompatActivity implements AsteroidAdapter.OnAsteroidItemClickListener{
     public static final String TAG = button4.class.getSimpleName();
 
     private AsteroidAdapter asteroidAdapter;
@@ -139,14 +137,6 @@ public class button4 extends AppCompatActivity
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()) {
-            case R.id.back:
-                Intent intent1 = new Intent(this, buttonPage.class);
-                startActivity(intent1);
-        }
-    }
 
     private void loadNeoFeed() {
         this.neoFeedViewModel.loadNeoFeed(

@@ -26,11 +26,11 @@ public class button3 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_button3);
 
         //buttons used
-        back = (Button)findViewById(R.id.back);
-        back.setOnClickListener(this);
         marsPhotoB = (Button)findViewById(R.id.searching);
         marsPhotoB.setOnClickListener(this);
         setTitle("Mars Rover Photos");
+        //back button in the header
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Instruction on how to use MARS info
         directionsTV = (TextView)findViewById(R.id.directions);
@@ -44,11 +44,6 @@ public class button3 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.back:
-                Intent intent1 = new Intent(this, buttonPage.class);
-                startActivity(intent1);
-                break;
-
             case R.id.searching:
                 Intent intent3 = new Intent(this, MARS.class);
                 startActivity(intent3);

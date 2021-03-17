@@ -47,16 +47,18 @@ public class button2 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button2);
-        back = (Button)findViewById(R.id.back);
         Date_et = findViewById(R.id.date_et);
         Lat_et = findViewById((R.id.lat_et));
         Lon_et = findViewById(R.id.lon_et);
         Submit_button = findViewById((R.id.submit_button));
         imageView = (ImageView) findViewById((R.id.iv));
         //this.todoEntryET = findViewById(R.id.et_todo_entry_box);
-        back.setOnClickListener(this);
         Date_et.setOnClickListener(this);
         Submit_button.setOnClickListener(this);
+
+
+        //back button in the header
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -64,10 +66,6 @@ public class button2 extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.back:
-                Intent intent1 = new Intent(this, buttonPage.class);
-                startActivity(intent1);
-                break;
 
             case R.id.date_et:
 

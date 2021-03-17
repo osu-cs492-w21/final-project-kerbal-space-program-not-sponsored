@@ -16,11 +16,15 @@
             android:parentActivityName=".button4" />
         <activity android:name=".button4"
             android:parentActivityName=".buttonPage"/>
-        <activity android:name=".button3" />
-        <activity android:name=".button2" />
-        <activity android:name=".button1" />
+        <activity android:name=".button3"
+            android:parentActivityName=".buttonPage"/>
+        <activity android:name=".button2"
+            android:parentActivityName=".buttonPage" />
+        <activity android:name=".button1"
+            android:parentActivityName=".buttonPage" />
         <activity android:name=".buttonPage" />
-        <activity android:name=".MARS" />
+        <activity android:name=".MARS"
+            android:parentActivityName=".button3"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -23,7 +23,7 @@ import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class button1 extends AppCompatActivity implements View.OnClickListener, AsyncResponse {
+public class button1 extends AppCompatActivity implements AsyncResponse {
     Button back;
     private static final String TAG;
 
@@ -42,23 +42,17 @@ public class button1 extends AppCompatActivity implements View.OnClickListener, 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button1);
 
-        back = (Button)findViewById(R.id.back);
+        //back button in the header
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         Log.d(TAG, "oncreate");
-        back.setOnClickListener(this);
 
         myAsyncTask.delegate =  this;
         myAsyncTask.execute("https://api.nasa.gov/planetary/apod?api_key=wNhNmYGWNzRmvr4vJYsx6Z4HXDZVvDaZ3QnXTKFx");
         setTitle("Astronomy Picture of the Day");
     }
 
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()) {
-            case R.id.back:
-                Intent intent1 = new Intent(this, buttonPage.class);
-                startActivity(intent1);
-        }
-    }
 
     @Override
     public void processFinish(PictureOfTheDay output) {

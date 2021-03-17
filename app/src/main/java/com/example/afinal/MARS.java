@@ -24,12 +24,8 @@ public class MARS extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mars);
         setTitle("Mars Rover Photos");
-
-        //buttons to go to previous page and button page
-        backB = findViewById(R.id.backMARS);
-        backB.setOnClickListener(this);
-        homeB = findViewById(R.id.homeMARS);
-        homeB.setOnClickListener(this);
+        //back button in the header
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Rover buttons Click to see pictures and rover info
         Perseverance = (Button)findViewById(R.id.perseveranceB);
@@ -55,14 +51,6 @@ public class MARS extends AppCompatActivity implements View.OnClickListener {
         //rover buttons store string name as the rovers name
         //search button searches for info for the rover and its pictures
         switch(v.getId()) {
-            case R.id.backMARS:
-                Intent intent1 = new Intent(this, button3.class);
-                startActivity(intent1);
-                break;
-            case R.id.homeMARS:
-                Intent intent2 = new Intent(this, buttonPage.class);
-                startActivity(intent2);
-                break;
             case R.id.perseveranceB:
                 marsRover = "perseverance";
                 break;
