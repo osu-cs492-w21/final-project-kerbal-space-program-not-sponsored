@@ -7,13 +7,16 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.afinal.data.AsteroidData;
 import com.example.afinal.data.LoadingStatus;
@@ -41,6 +44,7 @@ public class button4 extends AppCompatActivity
     private RecyclerView asteroidListRV;
     private TextView errorMessageTV;
     private ProgressBar loadingIndicatorPB;
+    private Toast webErrorToast;
 
     //loading indicator
     //error message
@@ -153,5 +157,29 @@ public class button4 extends AppCompatActivity
     @Override
     public void onAsteroidItemClick(AsteroidData asteroidData) {
         Log.d(TAG, "toast this before the link");
+        viewAsteroidOnWeb(asteroidData);
+    }
+    public void viewAsteroidOnWeb(AsteroidData asteroidData) {
+        if (asteroidData != null) {
+            Uri asteroidUrl = Uri.parse(asteroidData.getDetailsUrl());
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, asteroidUrl);
+            //handle for user not haveing web browser
+            try {
+                startActivity(webIntent);
+            } catch (ActivityNotFoundException e) {
+                Log.d(TAG, "No activity exists to handle the webIntent!");
+                if (this.webErrorToast != null) {
+                    this.webErrorToast.cancel();
+                }
+                this.webErrorToast = Toast.makeText(
+                        this,
+                        "No activity exists to handle the webIntent!",
+                        Toast.LENGTH_LONG
+                );
+                this.webErrorToast.show();
+            }
+
+
+        }
     }
 }
