@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Final">
-        <activity android:name=".button4"></activity>
+        <activity android:name=".button4"
+            android:parentActivityName=".buttonPage"/>
         <activity android:name=".button3" />
         <activity android:name=".button2" />
         <activity android:name=".button1" />

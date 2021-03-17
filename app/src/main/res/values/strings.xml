@@ -2,6 +2,8 @@
     <string name="app_name">Final</string>
 
     <string name="back_button_txt">Back</string>
+    <string name="button4_loading_error">Unable to fetch %1$s.\n\nError message: %2$s</string>
+    <string name="button4Name">Asteroids Near You</string>
 
     <string name="asteroid_date_label">Closest To Earth:</string>
     <string name="asteroid_diameter_label">Estimated Diameter: </string>
