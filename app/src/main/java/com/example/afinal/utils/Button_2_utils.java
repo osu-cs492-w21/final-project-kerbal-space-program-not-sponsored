@@ -19,7 +19,7 @@ public class Button_2_utils {
     }
 
     public static String buildEarthURL(Editable lon , Editable lat , Editable date){
-       return  Uri.parse(EARTH_URL).buildUpon()
+        return  Uri.parse(EARTH_URL).buildUpon()
                 .appendQueryParameter(EARTH_LON , String.valueOf(lon))
                 .appendQueryParameter(EARTH_LAT, String.valueOf(lat))
                 .appendQueryParameter(EARTH_DATE, String.valueOf(date))
@@ -31,7 +31,7 @@ public class Button_2_utils {
 
     public static String parseEarthData(String json){
         Gson gson = new Gson();
-       EarthSearchResults results = gson.fromJson(json,EarthSearchResults.class);
-       return results !=null ? results.url :null;
+        EarthSearchResults results = gson.fromJson(json,EarthSearchResults.class);
+        return results !=null ? results.url :null;
     }
 }

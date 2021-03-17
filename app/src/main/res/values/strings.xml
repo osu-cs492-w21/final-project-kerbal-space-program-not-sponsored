@@ -16,6 +16,8 @@
     <string name="latitude_label"> Latitude:</string>
     <string name="longitude_label">Longitude</string>
     <string name="date_label">Select Date:</string>
+    <string name="loading_error">Unable to extract the image. Please check your internet connection and try again. </string>
+
     <string name="title_activity_mars_date">MARSDate</string>
 
     <string name="back_button_txt">Back</string>
