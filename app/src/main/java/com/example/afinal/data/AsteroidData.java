@@ -1,4 +1,4 @@
-package com.example.afinal.Data;
+package com.example.afinal.data;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
