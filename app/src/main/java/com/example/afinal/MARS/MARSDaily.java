@@ -28,9 +28,9 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
         setTitle("Mars Rover Photos");
 
         //buttons to go to previous page and button page
-        backB = findViewById(R.id.backdaily3);
+        backB = (Button)findViewById(R.id.backdaily3);
         backB.setOnClickListener(this);
-        homeB = findViewById(R.id.homedaily3);
+        homeB = (Button)findViewById(R.id.homedaily3);
         homeB.setOnClickListener(this);
 
         //Rover buttons Click to see pictures and rover info
@@ -88,6 +88,7 @@ public class MARSDaily extends AppCompatActivity implements View.OnClickListener
                 //turn the text in the search bar into Sol number and use it to find pictures of the day the rover was on mars
                 int Sol = Integer.parseInt(sol);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentPhotos(Sol, marsRover)).commit();
+                break;
         }
     }
 }

@@ -11,8 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.afinal.buttonPage;
 import com.example.afinal.MARS.MARSDaily;
 
 public class button3 extends AppCompatActivity implements View.OnClickListener {
@@ -26,9 +26,9 @@ public class button3 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_button3);
 
         //buttons used
-        back = (Button)findViewById(R.id.back);
+        back = (Button)findViewById(R.id.back3);
         back.setOnClickListener(this);
-        marsPhotoB = (Button)findViewById(R.id.searching);
+        marsPhotoB = (Button)findViewById(R.id.searching3);
         marsPhotoB.setOnClickListener(this);
         setTitle("Mars Rover Photos");
 
@@ -44,11 +44,12 @@ public class button3 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.back:
+            case R.id.back3:
                 Intent intent1 = new Intent(this, buttonPage.class);
                 startActivity(intent1);
+                break;
 
-            case R.id.searching:
+            case R.id.searching3:
                 Intent intent3 = new Intent(this, MARSDaily.class);
                 startActivity(intent3);
                 break;
