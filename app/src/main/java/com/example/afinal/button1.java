@@ -48,7 +48,7 @@ public class button1 extends AppCompatActivity implements View.OnClickListener, 
 
         myAsyncTask.delegate =  this;
         myAsyncTask.execute("https://api.nasa.gov/planetary/apod?api_key=wNhNmYGWNzRmvr4vJYsx6Z4HXDZVvDaZ3QnXTKFx");
-
+        setTitle("Astronomy Picture of the Day");
     }
 
     @Override
