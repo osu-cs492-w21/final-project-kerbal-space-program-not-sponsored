@@ -1,18 +1,6 @@
 <resources>
     <string name="app_name">Final</string>
-    <string name="title_activity_mars_date">MARSDate</string>
-    <!-- Strings used for fragments for navigation -->
-
-    <string name="MARSrover_name" translatable="false">Rover Name: \u0020</string>
-    <string name="MARSstatus" translatable="false">Status: \u0020</string>
-    <string name="MARSlaunch_date" translatable="false">Launch Date: \u0020</string>
-    <string name="MARSlanding_date" translatable="false">Landing Date: \u0020</string>
-    <string name="MARSmax_sol" translatable="false">Max sol: \u0020</string>
-    <string name="MARSmartin_sol" translatable="false">Martian sol: \u0020</string>
-    <string name="MARSmax_earth_date" translatable="false">Max Earth Date: \u0020</string>
-    <string name="MARStotal_photos" translatable="false">Total Photos: \u0020</string>
-    <string name="MARSearth_date" translatable="false">Earth Date: \u0020</string>
-    <string name="MARSphoto_id" translatable="false">Photo Id: \u0020</string>
-    <string name="MARScamera" translatable="false">Camera: \u0020</string>
-
+    <string name="latitude_label"> Latitude:</string>
+    <string name="longitude_label">Longitude</string>
+    <string name="date_label">Select Date:</string>
 </resources>
