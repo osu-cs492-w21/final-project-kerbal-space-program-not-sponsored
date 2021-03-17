@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.afinal.data.AsteroidData;
@@ -25,7 +26,9 @@ import java.util.List;
 import java.util.Map;
 
 //Find asteroids near you
-public class button4 extends AppCompatActivity implements View.OnClickListener {
+public class button4 extends AppCompatActivity
+        implements View.OnClickListener,
+        AsteroidAdapter.OnAsteroidItemClickListener{
     public static final String TAG = button4.class.getSimpleName();
 
     private AsteroidAdapter asteroidAdapter;
@@ -37,6 +40,8 @@ public class button4 extends AppCompatActivity implements View.OnClickListener {
     private TextView dateBannerTV;
     private RecyclerView asteroidListRV;
     private TextView errorMessageTV;
+    private ProgressBar loadingIndicatorPB;
+
     //loading indicator
     //error message
 
@@ -59,13 +64,14 @@ public class button4 extends AppCompatActivity implements View.OnClickListener {
         this.dateBannerTV = findViewById(R.id.tv_date_banner);
         dateBannerTV.setText("TODAY");
         this.errorMessageTV = findViewById(R.id.tv_error_message);
+        this.loadingIndicatorPB = findViewById(R.id.pb_loading_indicator);
         this.asteroidListRV = findViewById(R.id.rv_asteroid_list);
         this.asteroidListRV.setLayoutManager(new LinearLayoutManager(this));
         this.asteroidListRV.setHasFixedSize(true);
         //layout manager?
         //fixed size?
 
-        this.asteroidAdapter = new AsteroidAdapter();//add clicklistener
+        this.asteroidAdapter = new AsteroidAdapter(this);//add clicklistener
         this.asteroidListRV.setAdapter(this.asteroidAdapter);
 
 
@@ -100,13 +106,13 @@ public class button4 extends AppCompatActivity implements View.OnClickListener {
                     @Override
                     public void onChanged(LoadingStatus loadingStatus) {
                         if (loadingStatus == LoadingStatus.LOADING) {
-//                            loadingIndicatorPB.setVisibility(View.VISIBLE);
+                            loadingIndicatorPB.setVisibility(View.VISIBLE);
                         } else if (loadingStatus == LoadingStatus.SUCCESS) {
-//                            loadingIndicatorPB.setVisibility(View.INVISIBLE);
+                            loadingIndicatorPB.setVisibility(View.INVISIBLE);
                             asteroidListRV.setVisibility(View.VISIBLE);
                             errorMessageTV.setVisibility(View.INVISIBLE);
                         } else {
-//                            loadingIndicatorPB.setVisibility(View.INVISIBLE);
+                            loadingIndicatorPB.setVisibility(View.INVISIBLE);
                             asteroidListRV.setVisibility(View.INVISIBLE);
                             errorMessageTV.setVisibility(View.VISIBLE);
                             errorMessageTV.setText(getString(
@@ -141,5 +147,11 @@ public class button4 extends AppCompatActivity implements View.OnClickListener {
         Date date = new Date();
         String dateStr = new SimpleDateFormat("yyyy-MM-dd").format(date);
         return dateStr;
+    }
+
+
+    @Override
+    public void onAsteroidItemClick(AsteroidData asteroidData) {
+        Log.d(TAG, "toast this before the link");
     }
 }

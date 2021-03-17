@@ -15,10 +15,14 @@ import java.util.ArrayList;
 
 public class AsteroidAdapter extends RecyclerView.Adapter<AsteroidAdapter.AsteroidViewHolder> {
     private ArrayList<AsteroidData> asteroidList;
-    //click listener
+    private AsteroidAdapter.OnAsteroidItemClickListener onAsteroidItemClickListener;
 
-    public AsteroidAdapter(){
+    public interface OnAsteroidItemClickListener {
+        void onAsteroidItemClick(AsteroidData asteroidData);
+    }
+    public AsteroidAdapter(OnAsteroidItemClickListener onAsteroidItemClickListener){
         asteroidList = new ArrayList<>();
+        this.onAsteroidItemClickListener = onAsteroidItemClickListener;
     }
 
     public void updateAsteroidList(ArrayList<AsteroidData> asteroidList) {
@@ -58,6 +62,16 @@ public class AsteroidAdapter extends RecyclerView.Adapter<AsteroidAdapter.Astero
             distanceTV = itemView.findViewById(R.id.tv_distance);
             velocityTV = itemView.findViewById(R.id.tv_velocity);
             hazardTV = itemView.findViewById(R.id.tv_hazard);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onAsteroidItemClickListener.onAsteroidItemClick(
+                            asteroidList.get(getAdapterPosition())
+                    );
+                }
+            });
+
         }
         public void bind(AsteroidData asteroid){
             nameTV.setText(asteroid.getName());
