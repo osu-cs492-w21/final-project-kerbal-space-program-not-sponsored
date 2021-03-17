@@ -21,6 +21,7 @@
     <string name="back_button_txt">Back</string>
     <string name="button4_loading_error">Unable to fetch %1$s.\n\nError message: %2$s</string>
     <string name="button4Name">Asteroids Near You</string>
+    <string name="button4_action_settings_title">Settings</string>
 
     <string name="asteroid_date_label">Closest To Earth:</string>
     <string name="asteroid_diameter_label">Estimated Diameter: </string>
@@ -28,7 +29,16 @@
     <string name="asteroid_velocity_label">Relative Distance:</string>
     <string name="asteroid_hazard_label">Collision Hazard:</string>
 
-    <string name="asteroid_diameter_str">%1$d - %2$d meters</string>
+    <string name="asteroid_diameter_str">%1$d - %2$d %3$s</string>
     <string name="asteroid_distance_str">%1$d kilometers</string>
     <string name="asteroid_velocity_str">%1$d kilometers/hour</string>
+
+    <!-- Strings for asteroid units preference -->
+    <string name="pref_diameter_units_title" translatable="false">Diameter Units</string>
+    <string name="pref_diameter_units_key" translatable="false">pref_diameter_units</string>
+    <string name="pref_diameter_unit_default">meters</string>
+
+<!--    <string name="pref_velocity_units_key" translatable="false">pref_velocity_units</string>-->
+<!--    -->
+<!--    <string name="pref_distance_units_key" translatable="false">pref_distance_units</string>-->
 </resources>

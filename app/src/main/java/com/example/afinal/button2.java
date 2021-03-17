@@ -101,10 +101,7 @@ public class button2 extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void btn2_url(){
-        String EarthURL = button_2_utils.buildEarthURL(
-                btn2_inputData.getLongitude() ,
-                btn2_inputData.getLatitude() ,
-                btn2_inputData.getDate());
+        String EarthURL = button_2_utils.buildEarthURL(btn2_inputData.getLongitude() ,btn2_inputData.getLatitude() , btn2_inputData.getDate());
         new Btn_urlTask().execute(EarthURL);
     }
 

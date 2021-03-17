@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference
+        android:title="@string/pref_diameter_units_title"
+        android:key="@string/pref_diameter_units_key"
+        android:dialogTitle="@string/pref_diameter_units_title"
+        android:entryValues="@array/pref_diameter_units_values"
+        android:entries="@array/pref_diameter_units_entries"
+        android:defaultValue="meters"
+        app:useSimpleSummaryProvider="true" />
+</PreferenceScreen>

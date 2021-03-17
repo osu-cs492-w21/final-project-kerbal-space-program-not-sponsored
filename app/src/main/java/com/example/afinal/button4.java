@@ -1,7 +1,9 @@
 package com.example.afinal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,9 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -39,6 +44,8 @@ public class button4 extends AppCompatActivity
     private Map<String, List<AsteroidData>> nearEarthObjects;
     private String queryDate;
 //    private String displayDate;
+
+    private SharedPreferences sharedPreferences;
 
     private TextView dateBannerTV;
     private RecyclerView asteroidListRV;
@@ -180,6 +187,23 @@ public class button4 extends AppCompatActivity
             }
 
 
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_button4, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.button4_action_settings:
+                Intent intent = new Intent(this, AsteroidSettingsActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
