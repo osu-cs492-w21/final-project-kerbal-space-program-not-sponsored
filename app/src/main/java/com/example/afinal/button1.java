@@ -97,7 +97,6 @@ public class button1 extends AppCompatActivity implements View.OnClickListener, 
                     Log.i("Video", "Video Playing....");
                 }
             });
-
         }
 
         title = findViewById(R.id.picture_title);
